@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+/* Container for adding user */
+.addUser {
+    width: 95%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    /* Updated shadow for a softer effect */
+    border-radius: 12px;
+    /* Slightly less rounded */
+    margin: 80px auto;
+    padding: 40px;
+    /* Adjusted padding for a more balanced look */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* Updated to Roboto, a popular Material font */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Back link styling */
+.addUser .backLink {
+    align-self: flex-start;
+    margin-bottom: 32px;
+    /* Adjusted margin for better spacing */
+    font-size: 16px;
+    color: #6200ee;
+    /* Material Design primary color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addUser .backLink:hover {
+    color: #3700b3;
+    /* Darker shade for hover effect */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Heading styling */
+.addUser h2 {
+    margin: 0 0 32px;
+    /* Adjusted margins for better spacing */
+    font-size: 32px;
+    color: #000000;
+    /* Updated color to standard Material text color */
+    text-align: center;
+    position: relative;
+    padding-bottom: 16px;
+    /* Reduced padding */
+    font-weight: 500;
+    /* Updated font weight for a softer look */
 }
 
-.App-link {
-  color: #61dafb;
+.addUser h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    /* Adjusted width */
+    height: 4px;
+    background-color: #6200ee;
+    /* Material Design primary color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Form styling */
+.addUserForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    /* Adjusted gap */
+}
+
+/* Row for form fields */
+.addUserForm .formRow {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    /* Reduced gap for a more compact look */
+}
+
+/* Column styling for individual inputs */
+.addUserForm .formColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.addUserForm .formColumn label {
+    font-size: 14px;
+    /* Adjusted font size */
+    color: #757575;
+    /* Material Design secondary text color */
+    margin-bottom: 8px;
+    /* Reduced margin for a more compact layout */
+    font-weight: 400;
+    /* Softer font weight */
+}
+
+/* Input field styling */
+.addUserForm .formColumn input {
+    padding: 16px 12px;
+    /* Adjusted padding */
+    border: 1px solid #e0e0e0;
+    /* Lighter border color */
+    border-radius: 8px;
+    /* Slightly less rounded */
+    outline: none;
+    font-size: 16px;
+    /* Adjusted font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    /* Consistent background color */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Input field focus state */
+.addUserForm .formColumn input:focus {
+    border-color: #6200ee;
+    /* Material Design primary color */
+    box-shadow: 0 0 0 4px rgba(98, 0, 238, 0.12);
+    /* Updated shadow */
+    background-color: #f5f5f5;
+    /* Slightly different background color on focus */
+}
+
+/* Button styling */
+.addUserForm .btn {
+    background-color: #6200ee;
+    /* Material Design primary color */
+    color: #ffffff;
+    font-weight: 500;
+    /* Adjusted font weight */
+    padding: 12px 16px;
+    /* Adjusted padding */
+    cursor: pointer;
+    border-radius: 8px;
+    /* Slightly less rounded */
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    font-size: 16px;
+    /* Adjusted font size */
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    /* Reduced margin */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Button hover state */
+.addUserForm .btn:hover {
+    background-color: #3700b3;
+    /* Darker shade for hover effect */
+    transform: translateY(-2px);
+    /* Reduced hover effect */
+}
+
+/* Button active state */
+.addUserForm .btn:active {
+    background-color: #03dac6;
+    /* Material Design accent color */
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .addUser {
+        padding: 20px;
+        /* Adjusted padding for smaller screens */
+    }
+
+    .addUserForm .formRow {
+        flex-direction: column;
+        gap: 24px;
+        /* Adjusted gap */
+    }
+
+    .addUser h2 {
+        font-size: 28px;
+        /* Adjusted font size */
+    }
+}
+
+/* Optional: Add a subtle animation to form elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Slightly less translation */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.addUserForm .formColumn {
+    animation: fadeInUp 0.5s ease-out forwards;
+    /* Slightly shorter animation */
+    opacity: 0;
+}
+
+.addUserForm .formColumn:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.addUserForm .formColumn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.addUserForm .btn {
+    animation-delay: 0.3s;
 }

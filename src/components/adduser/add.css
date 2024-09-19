@@ -1,0 +1,109 @@
+/* add.css */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+:root {
+    --dark: #2b2d42;
+    --light: #adb5bd;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+    --accent: #16db93;
+    --bg-color: #f9f9f9;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #f0f4f8;
+}
+
+.addUser {
+    max-width: 786px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.addUser h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'PT Sans', sans-serif;
+    color: var(--dark);
+    text-align: center;
+}
+
+.addUser form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+.inputGroup input {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputGroup input:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.25);
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+}
+
+.btn:hover {
+    background-color: var(--dark);
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #004494;
+}
+
+.addUser a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    align-self: start;
+}
+
+.addUser a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .addUser {
+        margin: 20px;
+        padding: 20px;
+    }
+}
